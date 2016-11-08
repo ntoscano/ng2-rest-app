@@ -1,0 +1,30 @@
+<!-- widgets.component.html -->
+<div class="mdl-grid widgets">
+	<div class="mdl-cell mdl-cell--6-col">
+		<div *ngFor="let widget of widgets" (click)="selectWidget(widget)"
+        class="widget-card mdl-card mdl-shadow--2dp">
+			<div>
+				<div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">{{widget.name}}</h2>
+				</div>
+				<div class="mdl-card__supporting-text">
+					{{widget.description}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mdl-cell mdl-cell--6-col">
+		<div class="widget-card mdl-card mdl-shadow--2dp">
+			<div class="mdl-card__title">
+				<h2 class="mdl-card__title-text">SELECTED Widget
+				</h2>
+			</div>
+			<div *ngIf="selectedWidget" class="mdl-card__supporting-text">
+				{{selectedWidget.name}}
+			</div>
+			<div *ngIf="!selectedWidget" class="mdl-card__supporting-text">
+				PLEASE SELECT A WIDGET
+			</div>
+		</div>
+	</div>
+</div>

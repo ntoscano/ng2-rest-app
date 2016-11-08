@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Ng2RestAppRoutingModule } from './app-routing.module';
 
-import { ItemsService } from './shared';
+import { ItemsService, WidgetService } from './shared';
 
 import { AppComponent } from './app.component';
+import { ReviewComponent } from './review/review.component';
+import { WidgetComponent } from './widgets/widgets.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemDetailComponent } from './items/item-detail/item-detail.component';
@@ -15,6 +17,8 @@ import { FeaturedItemComponent } from './items/featured-item/featured-item.compo
 @NgModule({
   declarations: [
     AppComponent,
+    WidgetComponent,
+    ReviewComponent,
     ItemsComponent,
     ItemsListComponent,
     ItemDetailComponent,
